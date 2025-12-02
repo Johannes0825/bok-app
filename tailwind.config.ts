@@ -1,22 +1,24 @@
-// import type { Config } from "tailwindcss";
+import type { Config } from "tailwindcss";
 
-// const config: Config = {
-//     darkMode: "class", // Viktig! Dette forteller Tailwind å bruke class-basert dark mode
-//     content: [
-//         "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-//         "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-//         "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-//         "./src/Components/**/*.{js,ts,jsx,tsx,mdx}",
-//     ],
-//     theme: {
-//         extend: {
-//             colors: {
-//                 background: "var(--background)",
-//                 foreground: "var(--foreground)",
-//             },
-//         },
-//     },
-//     plugins: [],
-// };
-
-// export default config;
+export default {
+    darkMode: "class",
+    content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
+    theme: {
+        extend: {
+            colors: {
+                bg: "var(--bg)",
+                fg: "var(--fg)",
+                heading: "var(--heading)",
+                "card-bg": "var(--card-bg)",
+                "card-fg": "var(--card-fg)",
+                "card-border": "var(--card-border)",
+                "navbar-bg": "var(--navbar-bg)",
+                "navbar-fg": "var(--navbar-fg)",
+                "navbar-border": "var(--navbar-border)",
+                accent: "var(--accent)",
+                "accent-hover": "var(--accent-hover)",
+            },
+        },
+    },
+    plugins: [],
+} satisfies Config;
