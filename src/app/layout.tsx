@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import MyBooksProvider from "@/context/MyBooksContext";
 import NavBar from "@/Components/NavBar";
+import { ThemeProvider } from "@/context/ThemeContext";
 // import { ThemeProvider } from "@/context/ThemeContext";
 // import ClientLayout from "@/Components/ClientLayout";
 
@@ -34,10 +35,12 @@ export default function RootLayout({
                 {/* <ThemeProvider> */}
                 {/* <ClientLayout></ClientLayout> */}
                 {/* </ThemeProvider> */}
-                <MyBooksProvider>
-                    <NavBar />
-                    {children}
-                </MyBooksProvider>
+                <ThemeProvider>
+                    <MyBooksProvider>
+                        <NavBar />
+                        {children}
+                    </MyBooksProvider>
+                </ThemeProvider>
             </body>
         </html>
     );

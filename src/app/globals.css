@@ -1,58 +1,59 @@
 @import "tailwindcss";
 
 :root {
-    color-scheme: light dark;
+    --font-geist-sans: "Geist Sans", sans-serif;
+    --font-geist-mono: "Geist Mono", monospace;
+
+    /* Light mode farger */
+    --color-bg: #f8f8f8;
+    --color-fg: #4f4f4f;
+    --color-heading: #2b2b2b;
+
+    --color-card-bg: #ededed;
+    --color-card-fg: #5e5e5e;
+    --color-card-border: #f2f2f2;
+
+    --color-navbar-bg: #f2f2f2;
+    --color-navbar-fg: #383838;
+    --color-navbar-border: #e2e8f0;
+
+    --color-accent: #ef4444;
+    --color-accent-hover: #dc2626;
 }
 
-@theme inline {
+.dark {
+    /* Dark mode farger */
+    --color-bg: #141414;
+    --color-fg: #e2e2e2;
+    --color-heading: #f9f9f9;
+
+    --color-card-bg: #252525;
+    --color-card-fg: #e2e2e2;
+    --color-card-border: #414141;
+
+    --color-navbar-bg: rgb(40, 40, 40);
+    --color-navbar-fg: #efefef;
+    --color-navbar-border: #323232;
+
+    --color-accent: #f87171;
+    --color-accent-hover: #ef4444;
+}
+
+@theme {
     --font-sans: var(--font-geist-sans);
     --font-mono: var(--font-geist-mono);
 
-    /* Light mode farger */
-    --bg: #f9fafb;
-    --fg: #111827;
-    --heading: #0f172a;
-
-    --card-bg: #ffffff;
-    --card-fg: #1f2937;
-    --card-border: #e5e7eb;
-
-    --navbar-bg: #ffffff;
-    --navbar-fg: #111827;
-    --navbar-border: #e5e7eb;
-
-    --accent: #ef4444;
-    --accent-hover: #dc2626;
-
-    --zinc-50: #fafafa;
-    --zinc-100: #f4f4f5;
-    --zinc-200: #e4e4e7;
-    --zinc-300: #d4d4d8;
-    --zinc-400: #a1a1aa;
-    --zinc-500: #71717a;
-    --zinc-600: #52525b;
-    --zinc-700: #3f3f46;
-    --zinc-800: #27272a;
-    --zinc-900: #18181b;
-}
-
-@media (prefers-color-scheme: dark) {
-    @theme inline {
-        --bg: #0a0a0a;
-        --fg: #ededed;
-        --heading: #ffffff;
-
-        --card-bg: #18181b;
-        --card-fg: #e5e7eb;
-        --card-border: #3f3f46;
-
-        --navbar-bg: #18181b;
-        --navbar-fg: #ededed;
-        --navbar-border: #3f3f46;
-
-        --accent: #f87171;
-        --accent-hover: #ef4444;
-    }
+    --color-bg: var(--color-bg);
+    --color-fg: var(--color-fg);
+    --color-heading: var(--color-heading);
+    --color-card-bg: var(--color-card-bg);
+    --color-card-fg: var(--color-card-fg);
+    --color-card-border: var(--color-card-border);
+    --color-navbar-bg: var(--color-navbar-bg);
+    --color-navbar-fg: var(--color-navbar-fg);
+    --color-navbar-border: var(--color-navbar-border);
+    --color-accent: var(--color-accent);
+    --color-accent-hover: var(--color-accent-hover);
 }
 
 html,
@@ -63,8 +64,8 @@ body {
 
 body {
     font-family: var(--font-sans);
-    background: var(--bg);
-    color: var(--fg);
+    background: var(--color-bg);
+    color: var(--color-fg);
 }
 
 h1,
@@ -73,6 +74,6 @@ h3,
 h4,
 h5,
 h6 {
-    color: var(--heading);
+    color: var(--color-heading);
     font-weight: 700;
 }

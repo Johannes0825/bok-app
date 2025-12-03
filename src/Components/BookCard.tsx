@@ -36,7 +36,7 @@ export default function BookCard({ book, showDelete = false }: BookCardProps) {
     return (
         <div
             onClick={handleClick}
-            className="w-full h-full p-6 hover:cursor-pointer hover:scale-102 hover:bg-zinc-700 transition ease-in-out bg-zinc-800 border border-zinc-700 rounded-2xl flex justify-between flex-col"
+            className="w-full h-full p-6 hover:cursor-pointer hover:scale-102 transition ease-in-out bg-card-bg text-card-fg border border-card-border hover:bg-card-border rounded-2xl flex justify-between flex-col"
         >
             <div className="flex flex-col items-center text-center ">
                 {imageSrc && (
@@ -49,12 +49,14 @@ export default function BookCard({ book, showDelete = false }: BookCardProps) {
                     />
                 )}
                 <h1 className="text-2xl font-bold py-3 ">{title}</h1>
-                <p className="text-zinc-300">{authors.map((a) => a.name)}</p>
+                <p className="text-card-fg opacity-80">
+                    {authors.map((a) => a.name)}
+                </p>
             </div>
             {showDelete && (
                 <button
                     onClick={handleDelete}
-                    className="border mt-2 border-red-400 rounded-xl py-2 px-4 transition hover:cursor-pointer  duration-125 ease-in-out hover:bg-red-400 hover:text-white"
+                    className="border mt-2 border-accent text-accent rounded-xl py-2 px-4 transition hover:cursor-pointer duration-125 ease-in-out hover:bg-accent hover:text-white"
                 >
                     Delete
                 </button>

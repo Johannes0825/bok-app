@@ -1,9 +1,9 @@
 export default function BookCardSkeleton() {
     return (
-        <div className="w-full flex flex-col items-center text-center p-6 bg-zinc-800 border border-zinc-700 rounded-2xl animate-pulse">
-            <div className="h-[300px] aspect-2/3 bg-zinc-700 rounded-lg"></div>
-            <div className="h-8 w-full bg-zinc-700 rounded mt-3"></div>
-            <div className="h-5 w-2/3 bg-zinc-700 rounded mt-2"></div>
+        <div className="w-full h-full p-6 hover:cursor-pointer hover:scale-102 transition ease-in-out bg-card-bg text-card-fg border border-card-border hover:bg-card-border rounded-2xl flex justify-between flex-col">
+            <div className="h-[300px] aspect-2/3 bg-card-border rounded-lg"></div>
+            <div className="h-8 w-full bg-card-border rounded mt-3"></div>
+            <div className="h-5 w-2/3 bg-card-border rounded mt-2"></div>
         </div>
     );
 }

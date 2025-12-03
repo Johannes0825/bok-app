@@ -34,7 +34,7 @@ export default function BookDetailPage() {
 
     return (
         <div className="flex min-h-screen items-center justify-center p-6">
-            <div className="max-w-6xl w-full bg-zinc-900 rounded-2xl p-8">
+            <div className="max-w-6xl w-full bg-card-bg rounded-2xl p-8">
                 <Link
                     href="/home"
                     className="text-red-400 hover:underline mb-6 inline-block"
@@ -59,7 +59,7 @@ export default function BookDetailPage() {
                         <h1 className="text-4xl font-bold mb-4">
                             {book.title}
                         </h1>
-                        <p className="text-xl text-zinc-400 mb-6">
+                        <p className="text-xl text-card-fg mb-6">
                             {book.authors.map((a) => a.name).join(", ")}
                         </p>
                         <button
@@ -76,9 +76,7 @@ export default function BookDetailPage() {
                                 <h2 className="text-2xl font-semibold mb-2">
                                     Summary
                                 </h2>
-                                <p className="text-zinc-300">
-                                    {book.summaries[0]}
-                                </p>
+                                <p className="text-fg">{book.summaries[0]}</p>
                             </div>
                         )}
                         {book.subjects && book.subjects.length > 0 && (
@@ -90,7 +88,7 @@ export default function BookDetailPage() {
                                     {book.subjects.map((subject, i) => (
                                         <span
                                             key={i}
-                                            className="px-3 py-1 bg-zinc-800 rounded-full text-sm"
+                                            className="px-3 py-1 bg-bg rounded-full text-sm"
                                         >
                                             {subject}
                                         </span>
@@ -103,7 +101,7 @@ export default function BookDetailPage() {
                                 <h2 className="text-2xl font-semibold mb-2">
                                     Languages
                                 </h2>
-                                <p className="text-zinc-300">
+                                <p className="text-navbar-fg">
                                     {book.languages.join(", ").toUpperCase()}
                                 </p>
                             </div>
