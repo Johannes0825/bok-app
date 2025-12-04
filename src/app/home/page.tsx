@@ -33,7 +33,7 @@ export default function Home() {
             <SearchBar onSearch={handleSearch} />
             <div className="flex min-h-screen items-center justify-center ">
                 <main className="flex min-h-screen w-svw flex-col items-center justify-between py-6 px-16  sm:items-start">
-                    <div className="grid md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 gap-10 justify-center w-full">
+                    <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 lg:grid-cols-4 gap-10 justify-center w-full">
                         {loading
                             ? Array.from({ length: 12 }).map((_, i) => (
                                   <BookCardSkeleton key={i} />

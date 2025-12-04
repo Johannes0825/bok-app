@@ -9,13 +9,6 @@ export default function MyBooks() {
     // const [books, setBooks] = useState<Result | null>(null);
     const { myBooks } = useMyBooks();
 
-    // useEffect(() => {
-    //     const books = localStorage.getItem("my books");
-    //     if (books) {
-    //         setBooks(JSON.parse(books));
-    //     }
-    // }, []);
-
     return (
         <>
             <div className="flex min-h-screen items-center justify-center ">

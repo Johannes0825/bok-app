@@ -16,6 +16,8 @@
     --color-navbar-bg: #f2f2f2;
     --color-navbar-fg: #383838;
     --color-navbar-border: #e2e8f0;
+    --color-theme-btn-bg: #e5e5e5;
+    --color-theme-btn-hover: #dddddd;
 
     --color-accent: #ef4444;
     --color-accent-hover: #dc2626;
@@ -34,6 +36,8 @@
     --color-navbar-bg: rgb(40, 40, 40);
     --color-navbar-fg: #efefef;
     --color-navbar-border: #323232;
+    --color-theme-btn-bg: #202020;
+    --color-theme-btn-hover: #3c3c3c;
 
     --color-accent: #f87171;
     --color-accent-hover: #ef4444;
@@ -54,6 +58,8 @@
     --color-navbar-border: var(--color-navbar-border);
     --color-accent: var(--color-accent);
     --color-accent-hover: var(--color-accent-hover);
+    --color-theme-btn-hover: var(--color-theme-btn-hover)
+    --color-theme-btn-bg: var(--color-theme-btn-bg)
 }
 
 html,

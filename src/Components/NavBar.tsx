@@ -36,7 +36,7 @@ export default function NavBar() {
                     console.log("Button clicked in NavBar");
                     toggleTheme();
                 }}
-                className="border border-zinc-300 dark:border-zinc-600 rounded-3xl py-2 px-6 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-all duration-200 flex items-center gap-2 "
+                className="border border-accent bg-theme-btn-bg hover:bg-theme-btn-hover cursor-pointer rounded-3xl py-2 px-6  transition-all duration-200 flex items-center gap-2 "
             >
                 {theme === "dark" ? "☀️ Light" : "🌙 Dark"}
             </button>
